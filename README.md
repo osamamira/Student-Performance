@@ -26,8 +26,52 @@ The primary objective of this analysis is to:
 
 The dataset shows an almost equal distribution of males and females among the students.
 
-```python
-count_gender = df['Gender'].value_counts()
-plt.pie(count_gender, labels=count_gender.index, autopct='%1.1f%%', startangle=90)
-plt.title('Gender Distribution')
-plt.show()
+### Age Distribution
+
+The age distribution of students is relatively uniform, with most students being between 18 and 24 years old.
+
+### Department Distribution
+
+The dataset includes students from various departments. The distribution of students across departments is also analyzed.
+
+## Data Cleaning
+
+The dataset contains missing values in the following columns:
+- `Attendance (%)`: 516 missing values
+- `Assignments_Avg`: 517 missing values
+- `Parent_Education_Level`: 1794 missing values
+
+These missing values were handled by filling them with the median value for numerical columns and the mode for categorical columns.
+
+## Insights and Recommendations
+
+1. **Gender and Performance**: The analysis shows that gender does not significantly impact academic performance, as the distribution of grades is similar across genders.
+2. **Age and Performance**: Older students tend to perform slightly better, possibly due to more experience and maturity.
+3. **Study Habits**: Students who spend more hours studying tend to have higher grades. Encouraging better study habits could improve overall performance.
+4. **External Factors**: Access to the internet at home and higher family income levels are positively correlated with better academic performance. Providing resources to students from lower-income families could help bridge this gap.
+
+## Conclusion
+
+This analysis provides valuable insights into the factors affecting student performance. By addressing the identified trends and patterns, educators and policymakers can implement targeted interventions to improve academic outcomes.
+
+## Supporting Material
+
+- Dataset: [Students Grading Dataset](https://www.kaggle.com/datasets/mahmoudelhemaly/students-grading-dataset)
+
+## Dependencies
+
+- pandas
+- matplotlib
+- seaborn
+
+## How to Run
+
+1. Clone the repository.
+2. Install the required dependencies using `pip install -r requirements.txt`.
+3. Run the Jupyter notebook `Student Performance analysis.ipynb` to see the analysis and visualizations.
+
+```bash
+git clone https://github.com/your-repo/student-performance-analysis.git
+cd student-performance-analysis
+pip install -r requirements.txt
+jupyter notebook
